@@ -51,7 +51,7 @@ function getForecast(lat, lon, weatherQuery)
 function weatherSearch(weatherQuery)
 {
    
-    let geocodingUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + weatherQuery + "&limit=5&appid=6d3d04001d76e5ac03fafd3c5691957f"
+    let geocodingUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + weatherQuery + "&limit=5&appid=6d3d04001d76e5ac03fafd3c5691957f";
 
     fetch(geocodingUrl).then(function (response)
     {
@@ -71,6 +71,6 @@ function startSearch()
     let weatherQuery = document.querySelector("#weatherQuery");
     weatherQuery = weatherQuery.value;
     console.log(weatherQuery);
-    weatherSearch(weatherQuery)
+    weatherSearch(weatherQuery);
 }
 inputButton.addEventListener("click", startSearch);
